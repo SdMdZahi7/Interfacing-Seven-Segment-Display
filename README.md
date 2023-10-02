@@ -58,50 +58,100 @@ The LED segments are selected based on the decimal number. For example, if we wa
 
 ## PROGRAM:
 ~~~
+int cnt=0;
+int incPrev, decPrev;
 void setup()
-
 {
-
-pinMode(13, OUTPUT); // A segment
-
-pinMode(12, OUTPUT); // B segment
-
-pinMode(11, OUTPUT); // C segment
-
-pinMode(10, OUTPUT); // D segment
-
-pinMode(9, OUTPUT); // E segment
-
-pinMode(8, OUTPUT); // F segment
-
-pinMode(7, OUTPUT); // G segment
-
-pinMode(6, OUTPUT); // H segment
-
+pinMode(0, INPUT);
+pinMode(3, INPUT);
+pinMode(5, INPUT);
+pinMode(13, OUTPUT);
+pinMode(12, OUTPUT);
+pinMode(11, OUTPUT);
+pinMode(10, OUTPUT);
+pinMode(9, OUTPUT);
+pinMode(8, OUTPUT);
+pinMode(7, OUTPUT);
+pinMode(6, OUTPUT);
 }
-
 void loop()
-
 {
-
+int inc = digitalRead(3);
+int dec = digitalRead(5);
+int res = digitalRead(0);
+{
+switch (cnt)
+{
+case 0://when count value is zero show”0” on disp
 digitalWrite(13, HIGH);
-
-digitalWrite(12, LOW);
-
-digitalWrite(11, LOW);
-
-digitalWrite(10, LOW);
-
+digitalWrite(12, HIGH);
+digitalWrite(11, HIGH);
+digitalWrite(10, HIGH);
 digitalWrite(9, HIGH);
-
 digitalWrite(8, HIGH);
-
-digitalWrite(7, HIGH);
-
+digitalWrite(7, LOW);
 digitalWrite(6, LOW);
-
-delay(5000);
-
+break;
+case 1:// when count value is 1 show”1” on disp
+digitalWrite(13, LOW);
+digitalWrite(12, HIGH);
+digitalWrite(11, HIGH);
+digitalWrite(10, LOW);
+digitalWrite(9, LOW);
+digitalWrite(8, LOW);
+digitalWrite(7, LOW);
+digitalWrite(6, LOW);
+break;
+case 2:// when count value is 2 show”2” on disp
+digitalWrite(13, HIGH);
+digitalWrite(12, HIGH);
+digitalWrite(11, LOW);
+digitalWrite(10, HIGH);
+digitalWrite(9, HIGH);
+digitalWrite(8, LOW);
+digitalWrite(7, HIGH);
+digitalWrite(6, LOW);
+break;
+case 3:// when count value is 3 show”3” on disp
+digitalWrite(13, HIGH);
+digitalWrite(12, HIGH);
+digitalWrite(11, HIGH);
+digitalWrite(10, HIGH);
+digitalWrite(9, LOW);
+digitalWrite(8, LOW);
+digitalWrite(7, HIGH);
+digitalWrite(6, LOW);
+break;
+case 4:// when count value is 4 show”4” on disp
+digitalWrite(13, LOW);
+digitalWrite(12, HIGH);
+digitalWrite(11, HIGH);
+digitalWrite(10, LOW);
+digitalWrite(9, LOW);
+digitalWrite(8, HIGH);
+digitalWrite(7, HIGH);
+digitalWrite(6, LOW);
+break;
+}
+}
+if((inc == HIGH)&& (cnt < 3))
+{
+delay(1000);
+cnt++;
+switch (cnt);
+}
+if((dec == HIGH) && (cnt > 0))
+{
+delay(1000);
+cnt--;
+switch (cnt);
+}
+if ((res == HIGH)&& (cnt > 0))
+{
+delay(1000);
+cnt=0;
+switch (cnt);
+}
 }
 ~~~
 
