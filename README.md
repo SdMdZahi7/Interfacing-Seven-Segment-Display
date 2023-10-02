@@ -156,11 +156,11 @@ switch (cnt);
 ~~~
 
 ## CIRCUIT DIAGRAM:
-![image](https://github.com/SdMdZahi7/Interfacing-Seven-Segment-Display/assets/94187572/b8f08bcb-cf16-4afc-ab9a-845491902f08)
+![image](https://github.com/SdMdZahi7/Interfacing-Seven-Segment-Display/assets/94187572/5f5871b0-6af0-4381-aa4e-bd2f03085e30)
 
 
 ## OUTPUT:
-![image](https://github.com/SdMdZahi7/Interfacing-Seven-Segment-Display/assets/94187572/6c25f783-ca66-4cf6-ad08-48311d2f1cfc)
+![image](https://github.com/SdMdZahi7/Interfacing-Seven-Segment-Display/assets/94187572/3d199e33-b3e2-4f86-a4cc-97a7ae4747a4)
 
 
 ## RESULT:
