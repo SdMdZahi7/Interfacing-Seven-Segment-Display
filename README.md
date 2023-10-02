@@ -160,7 +160,7 @@ switch (cnt);
 
 
 ## OUTPUT:
-![image](https://github.com/SdMdZahi7/Interfacing-Seven-Segment-Display/assets/94187572/3d199e33-b3e2-4f86-a4cc-97a7ae4747a4)
+![image](https://github.com/SdMdZahi7/Interfacing-Seven-Segment-Display/assets/94187572/430cf2cb-23ec-42f5-b3ab-9e27983e1803)
 
 
 ## RESULT:
